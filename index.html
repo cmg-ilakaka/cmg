@@ -1,0 +1,316 @@
+<!DOCTYPE html><html>
+<head><title></title>
+<meta charset="utf-8">
+ <!-- Responsive -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- CSS -->
+ <link rel="stylesheet" href="bootstrap css.css">
+ <!-- jQuery
+ <script src="jquery3.2.1.js"></script>
+ JavaScript 
+ <script src="bootstrap3.3.7.js"></script>
+ -->
+</head>
+<style type="text/css">
+body{
+background-color:#99ff00;
+}
+#btd{
+width:320px;
+height:20px;
+background-color:#fff;
+border-radius:5%;
+}
+#btx{
+width:0%;
+height:20px;
+background-color:blue;
+border-radius:5%;
+}
+.bt{
+background-color:#123fff;
+border-radius:10%;
+border:2px solid black;
+box-shadow:0px 2px 5px 2px black;
+}
+#txt{
+color:#fff;
+background-color:black;
+text-align:center;
+border-radius:10%;
+border:2px solid red;
+}
+#bat{
+margin-left:150px;
+}
+#rfc{
+color:red;
+background-color:white;
+}
+</style>
+<body><p align="center">
+<b>ny batterinao dia:</b></p>
+<div id="btd">
+<div id="btx"><b id="bat"></b></div></div>
+
+<h1 id="txt" contentEditable="true">sorato eto</h1>
+<p align="right" style="color:red"><b class="bt" id="del" >fafana</b></p>
+
+<hr><p align="center" style="color:red"><b class="bt" id="clk" >havadika</b></p>
+
+<ul>
+<li><i id="num">isany:</i><b id="nb">9</b><br>
+</li><li><i id="rev">mivadiky:</i><b id="rv" contentEditable="true"></b><br>
+</li><li><i id="code">caidacript:<br><b id="cd" contentEditable="true"></b></i>
+</li></ul>
+<b>kitiho eto raha tsy mahay mampiasa azy ianao </b><i id="rfc">rfc</i>
+</body>
+
+<script src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var i=1;
+$("#rfc").click(function(){
+
+if(i==1){
+i=2;
+$("#rfc").text("***akatona de kitiho eto***1kitiho eo amn le mainty de ovay,2kitiho havadika de avy eo copieo le soratra dia alefaso ilay mess,kitiho ny fafana raha te hanoratra soratra hafa ianao #afaka kopienao eo amn le mainty  ny message cripté avy aty amiko de avadiho,noforonin'iCAIDA 1er utilisateur DERA");
+}
+else{
+i=1;
+$("#rfc").text("rfc");
+} 
+});
+$("#clk").click(function(){//validate
+var txt = $("h1").text();
+var n = txt.length;
+var pr=0;
+var de=1;
+var x=n;
+//******variable des cript
+var un="abcdefghijklmABCDEFGHIJKLMéèêï :";
+var deux="xwnvqzpurtysoXWNVQZPURTYSOàâôü!?";//A
+
+
+//******fin variable des cript
+
+$("#rv").text("");
+$("#cd").text("");
+$("#nb").text(x);
+var y=0;
+
+for(x=n;x>=0;x--){
+y++;
+
+var xx=txt[x];
+var yy=txt[x];
+$("#rv").append(txt[x]);
+if(yy==un[0]){//a,xן
+$("#cd").append(deux[0]);
+}
+else if(yy==deux[0]){
+$("#cd").append(un[0]);
+}
+if(yy==un[1]){//b,t
+$("#cd").append(deux[1]);
+}
+else if(yy==deux[1]){
+$("#cd").append(un[1]);
+}
+if(yy==un[2]){//c,z
+$("#cd").append(deux[2]);
+}
+else if(yy==deux[2]){
+$("#cd").append(un[2]);
+}
+if(yy==un[3]){//d,y
+$("#cd").append(deux[3]);
+}
+else if(yy==deux[3]){
+$("#cd").append(un[3]);
+}
+if(yy==un[4]){//e,n
+$("#cd").append(deux[4]);
+}
+else if(yy==deux[4]){
+$("#cd").append(un[4]);
+}
+if(yy==un[5]){//f,q
+$("#cd").append(deux[5]);
+}
+else if(yy==deux[5]){
+$("#cd").append(un[5]);
+}
+if(yy==un[6]){//g,w
+$("#cd").append(deux[6]);
+}
+else if(yy==deux[6]){
+$("#cd").append(un[6]);
+}
+if(yy==un[7]){//h,u
+$("#cd").append(deux[7]);
+}
+else if(yy==deux[7]){
+$("#cd").append(un[7]);
+}
+if(yy==un[8]){//i,v
+$("#cd").append(deux[8]);
+}
+else if(yy==deux[8]){
+$("#cd").append(un[8]);
+}
+if(yy==un[9]){//j,p
+$("#cd").append(deux[9]);
+}
+else if(yy==deux[9]){
+$("#cd").append(un[9]);
+}
+if(yy==un[10]){//k,m
+$("#cd").append(deux[10]);
+}
+else if(yy==deux[10]){
+$("#cd").append(un[10]);
+}
+if(yy==un[11]){//l,s
+$("#cd").append(deux[11]);
+}
+else if(yy==deux[11]){
+$("#cd").append(un[11]);
+}
+if(yy==un[12]){//m,k
+$("#cd").append(deux[12]);
+}
+else if(yy==deux[12]){
+$("#cd").append(un[12]);
+}
+if(yy==un[14]){//n,e
+$("#cd").append(deux[14]);
+}
+else if(yy==deux[14]){
+$("#cd").append(un[14]);
+}
+if(yy==un[15]){//n,e
+$("#cd").append(deux[15]);
+}
+else if(yy==deux[15]){
+$("#cd").append(un[15]);
+}
+if(yy==un[16]){//n,e
+$("#cd").append(deux[16]);
+}
+else if(yy==deux[16]){
+$("#cd").append(un[16]);
+}
+if(yy==un[13]){//n,e
+$("#cd").append(deux[13]);
+}
+else if(yy==deux[13]){
+$("#cd").append(un[13]);
+}
+if(yy==un[17]){//n,e
+$("#cd").append(deux[17]);
+}
+else if(yy==deux[17]){
+$("#cd").append(un[17]);
+}
+if(yy==un[18]){//n,e
+$("#cd").append(deux[18]);
+}
+else if(yy==deux[18]){
+$("#cd").append(un[18]);
+}
+if(yy==un[19]){//b,t
+$("#cd").append(deux[19]);
+}
+else if(yy==deux[19]){
+$("#cd").append(un[19]);
+}
+if(yy==un[20]){//c,z
+$("#cd").append(deux[20]);
+}
+else if(yy==deux[20]){
+$("#cd").append(un[20]);
+}
+if(yy==un[21]){//d,y
+$("#cd").append(deux[21]);
+}
+else if(yy==deux[21]){
+$("#cd").append(un[21]);
+}
+if(yy==un[22]){//e,n
+$("#cd").append(deux[22]);
+}
+else if(yy==deux[22]){
+$("#cd").append(un[22]);
+}
+if(yy==un[23]){//f,q
+$("#cd").append(deux[23]);
+}
+else if(yy==deux[23]){
+$("#cd").append(un[23]);
+}
+if(yy==un[24]){//g,w
+$("#cd").append(deux[24]);
+}
+else if(yy==deux[24]){
+$("#cd").append(un[24]);
+}
+if(yy==un[25]){//h,u
+$("#cd").append(deux[25]);
+}
+else if(yy==deux[25]){
+$("#cd").append(un[25]);
+}
+}
+});
+navigator.getBattery().then(function(battery){
+var c=battery.level;
+var cc=c*100;
+$("#bat").append(c*100+"%");
+$("#btx").css({
+"width":cc,
+})
+	
+});
+/*
+var x=document.getElementById("txt");
+var a=x.value;
+var b=a.lenght;
+*/
+$("#del").click(function(){//delete
+$("#txt").text("");
+$("#cd").text("");
+$("#rv").text("");
+$("#nb").text("");
+});
+$("#txt").click(function(){//delete as soon as you click the text first time
+if($("#txt").text()=="sorato eto"){
+$("#txt").text("");
+}
+});
+/*
+$("#clk").click(function(){//validate
+var txt = $("h1").text();
+var n = txt.length;
+var pr=0;
+var de=1;
+var x=n;
+//******
+var e="*E*"
+$("#nb").text(n);
+$("#rv").text("");
+$("#cd").text("");
+for(x=n;x>=0;x--){
+var xx=txt[x];
+$("#rv").append(txt[x]);
+/*
+if(xx=="h"){
+$("#cd").append(e);
+}
+else if(xx=="e"){
+$("#cd").append("!");
+}
+
+});*/
+});
+</script>
